@@ -1,4 +1,9 @@
-﻿namespace LinguaVerse_App
+﻿using LinguaVerse_App.Database;
+using Microsoft.Maui.Controls;
+using System;
+using System.Threading.Tasks;
+
+namespace LinguaVerse_App
 {
     public partial class MainPage : ContentPage
     {
@@ -9,7 +14,7 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnCounterClicked(object sender, EventArgs e)
         {
             count++;
 
@@ -19,7 +24,10 @@
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+
+            // Call the database connection method
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            await dbConnection.ConnectAndReadAsync();
         }
     }
-
 }

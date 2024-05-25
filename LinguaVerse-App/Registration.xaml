@@ -3,10 +3,53 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LinguaVerse_App.Registration"
              Title="Registration">
-    <VerticalStackLayout>
+
+
+    <ContentPage.Resources>
+        <Color x:Key="EntryBackgroundColor">white</Color>
+        <Color x:Key="EntryTextColor">#373A71</Color>
+        <Color x:Key="ButtonBackgroundColor">#373A71</Color>
+        <Color x:Key="ButtonTextColor">White</Color>
+
+        <Style TargetType="Entry">
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontFamily" Value="Calibri" />
+            <Setter Property="WidthRequest" Value="250" />
+            <Setter Property="BackgroundColor" Value="{StaticResource EntryBackgroundColor}" />
+            <Setter Property="TextColor" Value="{StaticResource EntryTextColor}" />
+            <Setter Property="Margin" Value="0,5" />
+            <!-- Added space between fields -->
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontFamily" Value="Calibri" />
+            <Setter Property="WidthRequest" Value="250" />
+            <Setter Property="Margin" Value="0,20" />
+            <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColor}" />
+            <Setter Property="TextColor" Value="{StaticResource ButtonTextColor}" />
+        </Style>
+    </ContentPage.Resources>
+    <VerticalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="LinguaVerse" FontSize="30" HorizontalTextAlignment="Center" TextColor="#E79968"/>
+        <BoxView HeightRequest="50" Background="white"/>
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Text="REGISTRATION"
+            HorizontalOptions="Center"
+            FontFamily="Calibri"
+            FontSize="18"
+            TextColor="#373A71"
+            Margin="0,0,0,30" />
+        <Entry Placeholder="Username" Text="{Binding Username}" />
+        <Entry Placeholder="Email" Text="{Binding Email}" />
+        <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}" />
+        <Entry Placeholder="Repeat Password" IsPassword="True" Text="{Binding ConfirmPassword}" />
+        <Button Text="Submit" FontAttributes="Bold" TextColor="White" Margin="0,20" HeightRequest="50" CornerRadius="10" BackgroundColor="#A597CC" Command="{Binding RegisterCommand}" IsEnabled="True" />
+        <Button Text="Already have an account?" FontAttributes="Bold" TextColor="White" Margin="0,20" HeightRequest="50" CornerRadius="10" BackgroundColor="#A597CC" Command="{Binding LoginCommand}" IsEnabled="True" />
     </VerticalStackLayout>
 </ContentPage>
+
+   

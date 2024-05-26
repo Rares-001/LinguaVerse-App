@@ -68,6 +68,9 @@ public partial class LoginModelView : ContentView
 namespace LinguaVerse_App.ViewModels;
 
 public partial class LoginModelView : ContentView
+namespace LinguaVerse_App.ViewModels;
+
+public class LoginModelView : ContentView
 {
 	public LoginModelView()
 	{
@@ -127,5 +130,6 @@ public partial class LoginModelView : ContentView
     {
         await Shell.Current.GoToAsync("register");
     }
+}
 }
 }

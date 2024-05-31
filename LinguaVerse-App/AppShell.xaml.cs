@@ -1,4 +1,4 @@
-﻿namespace LinguaVerse_App
+﻿namespace Flashcards
 {
     public partial class AppShell : Shell
     {
@@ -6,6 +6,5 @@
         {
             InitializeComponent();
         }
-
     }
 }

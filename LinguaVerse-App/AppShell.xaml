@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="LinguaVerse_App.AppShell"
+    x:Class="Flashcards.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:LinguaVerse_App"
-    Shell.FlyoutBehavior="Disabled"
-    Title="LinguaVerse_App">
+    xmlns:local="clr-namespace:Flashcards"
+    Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
         Title="Home"
